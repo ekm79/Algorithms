@@ -6,11 +6,13 @@ def rock_paper_scissors(n):
   rps = ['rock', 'paper', 'scissors']
   results = []
   for i in rps:
-    newList = [rps[i]]
+    newList = [i]
     for j in rps:
-      newList.append(rps[j])
+      newList.append(j)
     results.append(newList)
+    
   return newList
+  
 
 
 if __name__ == "__main__":
