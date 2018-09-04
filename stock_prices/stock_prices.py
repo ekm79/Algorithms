@@ -3,8 +3,8 @@
 import argparse
 
 def find_max_profit(prices):
-  pass 
-
+  return max(prices) - min(prices)
+  
 
 if __name__ == '__main__':
   # You can test your implementation by running 

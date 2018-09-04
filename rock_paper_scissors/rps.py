@@ -3,7 +3,15 @@
 import sys
 
 def rock_paper_scissors(n):
-  pass 
+  rps = ['rock', 'paper', 'scissors']
+  results = []
+  for i in rps:
+    newList = [rps[i]]
+    for j in rps:
+      newList.append(rps[j])
+    results.append(newList)
+  return newList
+
 
 if __name__ == "__main__":
   # Test out your implementation from the command line
