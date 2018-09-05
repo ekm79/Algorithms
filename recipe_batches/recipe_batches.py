@@ -3,14 +3,15 @@
 import math
 
 def recipe_batches(recipe, ingredients):
-  for i in recipe:
-    for j in ingredients:
-      if i == j:
-        amount = math.floor(j.value / i.value)
-        if amount < 1:
-          return 0
-        return amount
-  return min(amount)
+  min_ratio = math.inf
+  for ingredient, amount in recipe.items():
+    if ingredient not in ingredients:
+      return 0
+    ratio = math.floor(ingredients[ingredient] // amount)
+    if ratio < min_ratio:
+      min_ratio = ratio
+  return min_ratio
+
 
 if __name__ == '__main__':
   # Change the entries of these dictionaries to test 
